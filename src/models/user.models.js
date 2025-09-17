@@ -1,17 +1,3 @@
-/* 
-_id string pk
-watchHistory ObjectId[] videos
-username string
-email string
-fullName string
-avatar string
-coverimage string
-password string
-refreshToken string
-createdAt Date
-updateAt Date
-*/
-
 import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema(
