@@ -1,10 +1,3 @@
-/*
-subsriber ObjectId users
-  channel ObjectId users
-  createdAt Date
-  updateAt Date
-*/
-
 import mongoose, { Schema } from "mongoose";
 
 const subscriptionSchema = new Schema(

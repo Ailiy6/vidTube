@@ -1,12 +1,3 @@
-/*
-name string
-description string
-createdAt Date
-updateAt Date
-videos ObjectId[] videos
-owner ObjectId users
- */
-
 import mongoose, { Schema } from "mongoose";
 const playlistSchema = new Schema(
   {

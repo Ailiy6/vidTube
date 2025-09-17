@@ -1,9 +1,3 @@
-/*
- owner ObjectId users
-  content string
-  createdAt Date
-  updateAt Date
-*/
 import mongoose, { Schema } from "mongoose";
 const tweetSchema = new Schema(
   {

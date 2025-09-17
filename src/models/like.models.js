@@ -1,12 +1,3 @@
-/*
-comment ObjectId comments
-  createdAt Date
-  video ObjectId videos
-  createdAt Date
-  likedBy ObjectId users
-  tweet ObjectId tweets
-*/
-
 import mongoose, { Schema } from "mongoose";
 const likeSchema = new Schema(
   {
