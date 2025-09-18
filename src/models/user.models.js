@@ -29,7 +29,7 @@ const userSchema = new Schema(
       type: String, //cloudinary URL
       required: true,
     },
-    coverimage: {
+    coverImage: {
       type: String, //cloudinary URL
     },
     watchHistory: [
@@ -51,7 +51,8 @@ const userSchema = new Schema(
 
 // pre hook
 userSchema.pre("save", async function (next) {
-  if (!this.modified("password")) return next();
+  // FIXED IN REGISTRATION VIDEO
+  if (!this.isModified("password")) return next();
 
   this.password = bcrypt.hash(this.password, 10);
 
