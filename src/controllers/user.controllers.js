@@ -151,10 +151,10 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 
   const loggedInUser = await User.findById(user._id).select(
-    "-password -refreshToken "
+    "-password -refreshToken"
   );
   if (!loggedInUser) {
-    throw new ApiError(401, "User must login first");
+    throw new ApiError(401, "Invalid access token or user does not exist");
   }
 
   const options = {
@@ -173,6 +173,13 @@ const loginUser = asyncHandler(async (req, res) => {
         "User logged in successfully"
       )
     );
+});
+
+const logoutUser = asyncHandler(async (req, res) => {
+  await User
+    .findByIdAndUpdate
+    // TODO:need to come back after middleware
+    ();
 });
 
 const refreshAccessToken = asyncHandler(async (req, res) => {
